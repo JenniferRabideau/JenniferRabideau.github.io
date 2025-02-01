@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Home Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f0f0f0;
+        }
+
+        /* Section Styles */
+        section {
+            height: 100vh;
+            padding: 60px 20px; /* Adding padding to avoid overlap with nav */
+            text-align: center;
+            color: white;
+        }
+
+        section:nth-child(odd) {
+            background-color: #444;
+        }
+
+        section:nth-child(even) {
+            background-color: #555;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Styling the header */
+        .header {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+
+        /* General Section Text */
+        .section-content {
+            font-size: 1.2em;
+        }
+
+        /* Button styles */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 20px;
+            background-color: #f0a500;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #d87a00;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+            <li><a href="#section4">Section 4</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section 1 -->
+    <section id="section1">
+        <div class="header">Welcome to Section 1</div>
+        <div class="section-content">
+            <p>This is the first section of the page.</p>
+            <a href="#section2" class="btn">Go to Section 2</a>
+        </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="section2">
+        <div class="header">Welcome to Section 2</div>
+        <div class="section-content">
+            <p>This is the second section of the page.</p>
+            <a href="#section3" class="btn">Go to Section 3</a>
+        </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="section3">
+        <div class="header">Welcome to Section 3</div>
+        <div class="section-content">
+            <p>This is the third section of the page.</p>
+            <a href="#section4" class="btn">Go to Section 4</a>
+        </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section id="section4">
+        <div class="header">Welcome to Section 4</div>
+        <div class="section-content">
+            <p>This is the fourth and final section of the page.</p>
+            <a href="#section1" class="btn">Back to Section 1</a>
+        </div>
+    </section>
+
+</body>
+
+</html>
